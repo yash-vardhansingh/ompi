@@ -1,0 +1,14 @@
+prefix=/mnt/d/Git_Hub_test/ompi/openmpi
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: pmix
+Description: Process Management Interface for Exascale (PMIx)
+Version: 5.0.3rc1
+URL: https://pmix.org/
+Libs: -L${libdir} -Wl,-rpath -Wl,${libdir} -Wl,--enable-new-dtags -lpmix
+Libs.private: 
+Cflags: -I${includedir} -I${includedir}/pmix -pthread
+Requires: 
+Requires.private: 
